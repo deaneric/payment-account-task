@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+ <meta charset="UTF-8"/>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <link rel="stylesheet" type="text/css" href="css/payment-style.css"/>
+ <link rel="stylesheet" href="fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="script/payment-script.js"></script>  
+ <title>Payment Account</title>
+</head>
+<body> 
+  <div class="grid-container">
+    <div class="account-container">
+	 
+	 <h2>SIGN UP YOUR PAYMENT ACCOUNT</h2>
+	 <h5>Fill all form field to go next step</h5>
+	 <div class="line-container">
+	   <div id="line-color"></div>
+	 </div>
+	 <div class="contain images-container">
+	   <div class="icons">
+	     <i class="fas fa-unlock"></i>
+	     <span>Account</span>
+	   </div> 
+	   <div class="icons">
+	     <i class="fas fa-user"></i>
+	     <span>Personal</span>
+	   </div>
+	   <div class="icons">
+	     <i class="fas fa-credit-card"></i>
+	     <span>Payment</span> 
+	   </div>
+	   <div class="icons">
+	     <i class="fas fa-file-alt"></i>
+	     <span>Confirm</span>	
+	   </div>	
+	 </div>
+	 <div class="contain loading-container">
+	   <div id="loading-bar">
+	    <div id="light-loading-bar"></div>
+	   </div>
+	 </div>
+	 <form id="form">
+	 <!---ACCOUNT INFORMATION TAB--->
+     <div class="tab">	   
+	   <div class="contain account-info-container">
+	     <div class="account-header">
+		   <h3>Account Information</h3>
+		   <span>Step 1 - 4</span>
+		 </div>
+		 <div class="account-detail">
+		   <span>Email:</span><span class="important"> *</span>
+		   <div class="section email">
+		     <div><i class="far fa-envelope"></i></div>
+		     <div><input type="email" id="email" name="email" required="required" placeholder="Email"/></div>		
+           </div>			 
+		 </div>
+		 <div class="account-detail">
+		   <span>User Name:</span><span class="important"> *</span>
+		   <div class="section user-name">
+		     <div><i class="fas fa-user"></i></div>
+		     <div><input type="text" id="usr_name" name="usr_name" required="required" placeholder="User Name"/></div>		
+           </div>			 
+		 </div>
+		 <div class="account-detail">
+		   <span>Password:</span><span class="important"> *</span>
+		   <div class="section password">
+		     <div><i class="fas fa-key"></i></div>
+		     <div><input type="password" id="usr_password" name="usr_password" required="required" placeholder="User Password"/></div>		
+           </div>			 
+		 </div>
+		 <div class="account-detail">
+		   <span>Confirm Password:</span><span class="important"> *</span>
+		   <div class="section password">
+		     <div><i class="fas fa-check"></i></div>
+		     <div><input type="password" id="usr_con_password" name="usr_con_password" required="required" placeholder="Confirm Password"/></div>		
+           </div>			 
+		 </div>
+	   </div>
+     </div>
+	  <!---PERSONAL INFORMATION TAB--->
+	 <div class="tab">	 
+	   <div class="contain account-info-container">
+	     <div class="account-header">
+		   <h3>Personal Information</h3>
+		   <span>Step 2 - 4</span>
+		 </div>
+		 <div class="account-detail">
+		   <span>First Name:</span><span class="important"> *</span>
+		   <div class="section">
+		     <div><i class="fas fa-user"></i></div>
+		     <div><input type="text" id="f_name" name="f_name" required="required" placeholder="First Name"/></div>		
+           </div>			 
+		 </div>
+		 <div class="account-detail">
+		   <span>Surname Name:</span><span class="important"> *</span>
+		   <div class="section">
+		     <div><i class="fas fa-user"></i></div>
+		     <div><input type="text" id="sur_name" name="sur_name" required="required" placeholder="Surname Name"/></div>		
+           </div>			 
+		 </div>
+		 <div class="account-detail">
+		   <span>Birth Date:</span><span class="important"> *</span>
+		   <div class="section">
+		     <div><i class="far fa-calendar-alt"></i></i></div>
+		     <div><input type="date" id="dob" name="dob" required="required" placeholder="Birth Date"/></div>		
+           </div>			 
+		 </div>
+		 <div class="account-detail">
+		   <span>Mobile No.</span><span class="important"> *</span>
+		   <div class="section">
+		     <div><i class="fas fa-mobile-alt"></i></div>
+		     <div><input type="number" id="mob_no" name="mob_no" required="required" placeholder="Mobile Number"/></div>		
+           </div>			 
+		 </div>
+	   </div>
+     </div>
+	 <!---PAYMENT INFORMATION TAB--->
+	 <div class="tab">
+	   <div class="contain account-info-container">
+	     <div class="account-header">
+		   <h3>Payment Information</h3>
+		   <span>Step 3 - 4</span>
+		 </div>
+		 <div class="account-detail">
+		   <span>Card Type:</span><span class="important"> *</span>
+		   <div class="card-type">		     
+			 <span>Debit Card</span>
+			 <input type="radio" name="card_type" id="debit_card" value="debit-card"/>
+			 <span>Credit Card</span>
+			 <input type="radio" name="card_type" id="credit_card" value="credit-card"/>			 	
+           </div>			 
+		 </div>
+		 <div class="account-detail">
+		   <span>Select Bank:</span><span class="important"> *</span>
+		   <div class="section">
+		     <div><i class="far fa-money-bill-alt"></i></div>
+		     <div class="bank-list">
+			  <select id="bank_name" name="bank_name">
+			  </select>
+			 </div>		
+           </div>			 
+		 </div>
+		 <div class="account-detail">
+		   <span>Card Number:</span><span class="important"> *</span>
+		   <div class="section">
+		     <div><i class="far fa-credit-card"></i></div>
+		     <div><input type="number" id="card_number" name="card_number" required="required" placeholder="16 Digit Card Number"/></div>		
+           </div>			 
+		 </div>
+	   </div>
+     </div>
+	 <!---CONFORMATION TAB--->
+	 <div class="tab">	 
+	   <div class="contain account-info-container">
+	     <div class="account-header">
+		   <h3>Confirmation</h3>
+		   <span>Step 4 - 4</span>
+		 </div>
+		 <div class="account-detail">
+		   <span>Are you sure you wanna submit data?</span>			 
+		 </div>		 
+	   </div>
+     </div>
+	 
+	 </form>
+	  <!---BUTTON SECTION--->
+	 <div class="btn-section">
+		     <button type="button" class="btn btn-previous" id="btn_prev">Previous</button>			 
+		     <button type="button" class="btn btn-next" id="btn_next">Next</button>	
+     </div>
+	 
+    </div>
+  </div>
+</body>
+</html>
