@@ -1,0 +1,24 @@
+{
+  "name": "payment-account",
+  "version": "1.0.0",
+  "description": "multistep payment account form ",
+  "main": "index.js",
+  "scripts": {
+    "gulp-sass-style": "gulp sass",
+	"gulp-sass-watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deaneric/payment-account-task.git"
+  },
+  "author": "eric dean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deaneric/payment-account-task/issues"
+  },
+  "homepage": "https://github.com/deaneric/payment-account-task#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
